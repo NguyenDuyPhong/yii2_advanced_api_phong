@@ -1,8 +1,10 @@
-RESTful API in Yii 2 Advanced Application Template
-NguyenDuyPhong add more features: HttpBearerAuth, using auth_key (inside table: user) 
-Give me a look at:
-+ https://www.facebook.com/NguyenDuyPhong 
-+ https://github.com/NguyenDuyPhong   
+# RESTful API in Yii 2 Advanced Application Template
+# NguyenDuyPhong add more features: 
+- **HttpBearerAuth**, using auth_key (inside table: user) 
+- Including **database** inside the project
+- Give me a look at:
+. https://www.facebook.com/NguyenDuyPhong 
+. https://github.com/NguyenDuyPhong   
 ==================================================
 
 Yii2 Advanced Application Template with RESTful API configured. Take a look at http://budiirawan.com/setup-restful-api-yii2/ for more detail explanation
