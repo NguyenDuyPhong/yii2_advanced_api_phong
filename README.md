@@ -16,7 +16,7 @@ copy & paste; configure Yii2 library as you known.
 ```
 - Don't forget to create your database and table and configure it in **common/config/main-local.php**
 
-Thanks 
+Thanks, 
 Nguyễn Duy Phong
 
 
