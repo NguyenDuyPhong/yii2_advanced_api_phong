@@ -43,9 +43,11 @@ return [
                 [
                     'class' => 'yii\rest\UrlRule', 
                     'controller' => 'v1/country',
-                    // 'tokens' => [ // maybe Unable to resolve the request "v1/countries/AU"  
-                        // '{id}' => '<id:\\w+>'
-                    // ]
+                    'tokens' => [ 
+						// maybe Unable to resolve the request "v1/countries/AU"  
+						// only receive "v1/countries/12"  
+                        '{id}' => '<id:\\w+>'
+                    ] 
                     
                 ]
             ],        
