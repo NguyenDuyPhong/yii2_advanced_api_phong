@@ -8813,3 +8813,235 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1440577551.281
     'REQUEST_TIME' => 1440577551
 ]
+2015-08-27 04:07:16 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', 'deadface', NULL)
+#1 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Schema.php(444): yii\db\Connection->getSlavePdo()
+#5 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(732): yii\db\Schema->quoteValue('auth01')
+#6 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(164): yii\db\Connection->quoteValue('auth01')
+#7 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(794): yii\db\Command->getRawSql()
+#8 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(363): yii\db\Command->queryInternal('fetch', NULL)
+#9 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#10 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\ActiveQuery.php(285): yii\db\Query->one(NULL)
+#11 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#12 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\yii2_advanced_api_phong\common\models\User.php(76): yii\db\BaseActiveRecord::findOne(Array)
+#13 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\User.php(266): common\models\User::findIdentityByAccessToken('auth01', 'yii\\filters\\aut...')
+#14 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\filters\auth\HttpBearerAuth.php(44): yii\web\User->loginByAccessToken('auth01', 'yii\\filters\\aut...')
+#15 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(50): yii\filters\auth\HttpBearerAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#16 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\ActionFilter.php(71): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\ViewAction))
+#17 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#18 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#19 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#20 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\rest\ViewAction))
+#21 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\rest\ViewAction))
+#22 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#23 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('v1/country/view', Array)
+#24 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\yii2_advanced_api_phong\api\web\index.php(22): yii\base\Application->run()
+#26 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Schema.php(444): yii\db\Connection->getSlavePdo()
+#3 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(732): yii\db\Schema->quoteValue('auth01')
+#4 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(164): yii\db\Connection->quoteValue('auth01')
+#5 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(794): yii\db\Command->getRawSql()
+#6 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(363): yii\db\Command->queryInternal('fetch', NULL)
+#7 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#8 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\ActiveQuery.php(285): yii\db\Query->one(NULL)
+#9 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#10 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\yii2_advanced_api_phong\common\models\User.php(76): yii\db\BaseActiveRecord::findOne(Array)
+#11 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\User.php(266): common\models\User::findIdentityByAccessToken('auth01', 'yii\\filters\\aut...')
+#12 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\filters\auth\HttpBearerAuth.php(44): yii\web\User->loginByAccessToken('auth01', 'yii\\filters\\aut...')
+#13 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(50): yii\filters\auth\HttpBearerAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#14 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\ActionFilter.php(71): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\ViewAction))
+#15 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#16 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#17 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#18 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\rest\ViewAction))
+#19 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\rest\ViewAction))
+#20 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#21 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('v1/country/view', Array)
+#22 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\yii2_advanced_api_phong\api\web\index.php(22): yii\base\Application->run()
+#24 {main}
+Additional Information:
+
+2015-08-27 04:07:13 [::1][-][-][info][application] $_GET = [
+    'id' => 'AU'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1sqhesdsnim2qpi15d8iedmlt6'
+    '_csrf' => 'c7ff4047fa28f2cd7942007d65fbce8f8ab288d82ccf5087d3b46a985cfc6638a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ruK7X8dx5ABT2h32mziUyqqXEZResRWL\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Data_IT/Servers-Web_DBMS/xampp-win32-1.8.2-1-VC9/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Data_IT/Servers-Web_DBMS/xampp-win32-1.8.2-1-VC9/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=1sqhesdsnim2qpi15d8iedmlt6; _csrf=c7ff4047fa28f2cd7942007d65fbce8f8ab288d82ccf5087d3b46a985cfc6638a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ruK7X8dx5ABT2h32mziUyqqXEZResRWL%22%3B%7D'
+    'PATH' => 'C:\\Windows\\SYSTEM32;C:\\Windows;C:\\Windows\\SYSTEM32\\WBEM;C:\\Windows\\SYSTEM32\\WINDOWSPOWERSHELL\\V1.0\\;C:\\PROGRAM FILES\\TORTOISESVN\\BIN;C:\\PYTHON27;C:\\PROGRAM FILES\\MICROSOFT SQL SERVER\\100\\TOOLS\\BINN\\;C:\\PROGRAM FILES\\MICROSOFT SQL SERVER\\100\\DTS\\BINN\\;C:\\PROGRAM FILES\\MICROSOFT SQL SERVER\\100\\TOOLS\\BINN\\VSSHELL\\COMMON7\\IDE\\;C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO 9.0\\COMMON7\\IDE\\PRIVATEASSEMBLIES\\;D:\\DATA_IT\\JAVASCRIPT-CSS\\NODEJS\\NODEJS-INSTALLED02;D:\\DATA_IT\\SERVERS-WEB_DBMS\\XAMPP-WIN32-1.8.2-1-VC9\\PHP;C:\\PROGRAMDATA\\COMPOSERSETUP\\BIN;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Data_IT/Servers-Web_DBMS/xampp-win32-1.8.2-1-VC9/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Data_IT/Servers-Web_DBMS/xampp-win32-1.8.2-1-VC9/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Data_IT/Servers-Web_DBMS/xampp-win32-1.8.2-1-VC9/htdocs/yii2_advanced_api_phong/api/web/index.php'
+    'REMOTE_PORT' => '49574'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_advanced_api_phong/api/web/index.php/v1/countries/AU'
+    'SCRIPT_NAME' => '/yii2_advanced_api_phong/api/web/index.php'
+    'PATH_INFO' => '/v1/countries/AU'
+    'PATH_TRANSLATED' => 'D:\\Data_IT\\Servers-Web_DBMS\\xampp-win32-1.8.2-1-VC9\\htdocs\\v1\\countries\\AU'
+    'PHP_SELF' => '/yii2_advanced_api_phong/api/web/index.php/v1/countries/AU'
+    'REQUEST_TIME_FLOAT' => 1440641233.555
+    'REQUEST_TIME' => 1440641233
+]
+2015-08-27 04:07:22 [::1][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php:579
+Stack trace:
+#0 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(579): PDO->__construct('mysql:host=loca...', 'root', 'deadface', NULL)
+#1 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(529): yii\db\Connection->createPdoInstance()
+#2 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#3 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#4 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Schema.php(444): yii\db\Connection->getSlavePdo()
+#5 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(732): yii\db\Schema->quoteValue('auth01')
+#6 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(164): yii\db\Connection->quoteValue('auth01')
+#7 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(794): yii\db\Command->getRawSql()
+#8 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(363): yii\db\Command->queryInternal('fetch', NULL)
+#9 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#10 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\ActiveQuery.php(285): yii\db\Query->one(NULL)
+#11 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#12 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\yii2_advanced_api_phong\common\models\User.php(76): yii\db\BaseActiveRecord::findOne(Array)
+#13 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\User.php(266): common\models\User::findIdentityByAccessToken('auth01', 'yii\\filters\\aut...')
+#14 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\filters\auth\HttpBearerAuth.php(44): yii\web\User->loginByAccessToken('auth01', 'yii\\filters\\aut...')
+#15 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(50): yii\filters\auth\HttpBearerAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#16 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\ActionFilter.php(71): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\ViewAction))
+#17 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#18 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#19 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#20 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\rest\ViewAction))
+#21 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\rest\ViewAction))
+#22 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#23 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('v1/country/view', Array)
+#24 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#25 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\yii2_advanced_api_phong\api\web\index.php(22): yii\base\Application->run()
+#26 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it.
+' in D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php:534
+Stack trace:
+#0 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(836): yii\db\Connection->open()
+#1 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(823): yii\db\Connection->getMasterPdo()
+#2 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Schema.php(444): yii\db\Connection->getSlavePdo()
+#3 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Connection.php(732): yii\db\Schema->quoteValue('auth01')
+#4 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(164): yii\db\Connection->quoteValue('auth01')
+#5 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(794): yii\db\Command->getRawSql()
+#6 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Command.php(363): yii\db\Command->queryInternal('fetch', NULL)
+#7 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\Query.php(243): yii\db\Command->queryOne()
+#8 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\ActiveQuery.php(285): yii\db\Query->one(NULL)
+#9 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\db\BaseActiveRecord.php(101): yii\db\ActiveQuery->one()
+#10 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\yii2_advanced_api_phong\common\models\User.php(76): yii\db\BaseActiveRecord::findOne(Array)
+#11 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\User.php(266): common\models\User::findIdentityByAccessToken('auth01', 'yii\\filters\\aut...')
+#12 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\filters\auth\HttpBearerAuth.php(44): yii\web\User->loginByAccessToken('auth01', 'yii\\filters\\aut...')
+#13 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\filters\auth\AuthMethod.php(50): yii\filters\auth\HttpBearerAuth->authenticate(Object(yii\web\User), Object(yii\web\Request), Object(yii\web\Response))
+#14 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\ActionFilter.php(71): yii\filters\auth\AuthMethod->beforeAction(Object(yii\rest\ViewAction))
+#15 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#16 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Component.php(541): call_user_func(Array, Object(yii\base\ActionEvent))
+#17 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Controller.php(263): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#18 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\Controller.php(108): yii\base\Controller->beforeAction(Object(yii\rest\ViewAction))
+#19 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Controller.php(149): yii\web\Controller->beforeAction(Object(yii\rest\ViewAction))
+#20 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Module.php(455): yii\base\Controller->runAction('view', Array)
+#21 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('v1/country/view', Array)
+#22 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\libs\yii-2.0.4_full\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 D:\Data_IT\Servers-Web_DBMS\xampp-win32-1.8.2-1-VC9\htdocs\yii2_advanced_api_phong\api\web\index.php(22): yii\base\Application->run()
+#24 {main}
+Additional Information:
+
+2015-08-27 04:07:20 [::1][-][-][info][application] $_GET = [
+    'id' => 'AU'
+]
+
+$_COOKIE = [
+    'PHPSESSID' => '1sqhesdsnim2qpi15d8iedmlt6'
+    '_csrf' => 'c7ff4047fa28f2cd7942007d65fbce8f8ab288d82ccf5087d3b46a985cfc6638a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ruK7X8dx5ABT2h32mziUyqqXEZResRWL\";}'
+]
+
+$_SERVER = [
+    'MIBDIRS' => 'D:/Data_IT/Servers-Web_DBMS/xampp-win32-1.8.2-1-VC9/php/extras/mibs'
+    'MYSQL_HOME' => '\\xampp\\mysql\\bin'
+    'OPENSSL_CONF' => 'D:/Data_IT/Servers-Web_DBMS/xampp-win32-1.8.2-1-VC9/apache/bin/openssl.cnf'
+    'PHP_PEAR_SYSCONF_DIR' => '\\xampp\\php'
+    'PHPRC' => '\\xampp\\php'
+    'TMP' => '\\xampp\\tmp'
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.157 Safari/537.36'
+    'HTTP_CACHE_CONTROL' => 'no-cache'
+    'HTTP_ACCEPT' => '*/*'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=1sqhesdsnim2qpi15d8iedmlt6; _csrf=c7ff4047fa28f2cd7942007d65fbce8f8ab288d82ccf5087d3b46a985cfc6638a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ruK7X8dx5ABT2h32mziUyqqXEZResRWL%22%3B%7D'
+    'PATH' => 'C:\\Windows\\SYSTEM32;C:\\Windows;C:\\Windows\\SYSTEM32\\WBEM;C:\\Windows\\SYSTEM32\\WINDOWSPOWERSHELL\\V1.0\\;C:\\PROGRAM FILES\\TORTOISESVN\\BIN;C:\\PYTHON27;C:\\PROGRAM FILES\\MICROSOFT SQL SERVER\\100\\TOOLS\\BINN\\;C:\\PROGRAM FILES\\MICROSOFT SQL SERVER\\100\\DTS\\BINN\\;C:\\PROGRAM FILES\\MICROSOFT SQL SERVER\\100\\TOOLS\\BINN\\VSSHELL\\COMMON7\\IDE\\;C:\\PROGRAM FILES\\MICROSOFT VISUAL STUDIO 9.0\\COMMON7\\IDE\\PRIVATEASSEMBLIES\\;D:\\DATA_IT\\JAVASCRIPT-CSS\\NODEJS\\NODEJS-INSTALLED02;D:\\DATA_IT\\SERVERS-WEB_DBMS\\XAMPP-WIN32-1.8.2-1-VC9\\PHP;C:\\PROGRAMDATA\\COMPOSERSETUP\\BIN;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3 Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.10 (Win32) OpenSSL/1.0.1i PHP/5.6.3'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => 'D:/Data_IT/Servers-Web_DBMS/xampp-win32-1.8.2-1-VC9/htdocs'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/Data_IT/Servers-Web_DBMS/xampp-win32-1.8.2-1-VC9/htdocs'
+    'SERVER_ADMIN' => 'postmaster@localhost'
+    'SCRIPT_FILENAME' => 'D:/Data_IT/Servers-Web_DBMS/xampp-win32-1.8.2-1-VC9/htdocs/yii2_advanced_api_phong/api/web/index.php'
+    'REMOTE_PORT' => '49574'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/yii2_advanced_api_phong/api/web/index.php/v1/countries/AU'
+    'SCRIPT_NAME' => '/yii2_advanced_api_phong/api/web/index.php'
+    'PATH_INFO' => '/v1/countries/AU'
+    'PATH_TRANSLATED' => 'D:\\Data_IT\\Servers-Web_DBMS\\xampp-win32-1.8.2-1-VC9\\htdocs\\v1\\countries\\AU'
+    'PHP_SELF' => '/yii2_advanced_api_phong/api/web/index.php/v1/countries/AU'
+    'REQUEST_TIME_FLOAT' => 1440641240.768
+    'REQUEST_TIME' => 1440641240
+]
